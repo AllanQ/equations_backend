@@ -17,5 +17,4 @@ class QuadraticEquation < Equation
   def discriminant
     self.b**2 - 4*self.a*self.c
   end
-
 end
