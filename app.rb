@@ -13,9 +13,13 @@ options '/' do
 end
 
 post '/' do
-  payload = JSON.parse(request.body.read)
-  authenticate!(payload)
-  res = EquationSolution.new(payload).result
-  content_type :json
-  { x1: res[0].to_s, x2: res[1].to_s }.to_json
+  begin
+    payload = JSON.parse(request.body.read)
+    authenticate!(payload)
+    res = EquationSolution.new(payload).result
+    content_type :json
+    { x1: res[0].to_s, x2: res[1].to_s }.to_json
+  rescue => error
+    { error: error }.to_json
+  end
 end
