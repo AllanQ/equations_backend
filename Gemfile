@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 
 gem 'sinatra'
-gem 'rspec'
 gem 'json'
+gem 'rspec'
+# gem 'rspec-context-private'

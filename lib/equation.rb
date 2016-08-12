@@ -2,8 +2,14 @@ class Equation
   attr_accessor :a, :b, :c
 
   def initialize(params)
-    self.a = params['a'].to_f if params['a']
-    self.b = params['b'].to_f if params['b']
-    self.c = params['c'].to_f if params['c']
+    self.a = to_f_if_numeric(params['a'])
+    self.b = to_f_if_numeric(params['b'])
+    self.c = to_f_if_numeric(params['c'])
+  end
+
+  # private
+
+  def to_f_if_numeric(str)
+    (str && str.numeric?) ? str.to_f : str
   end
 end

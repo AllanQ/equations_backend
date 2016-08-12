@@ -10,7 +10,7 @@ helpers do
       halt 401
     end
     public_key_client = auth_header[0]
-    signature       = auth_header[1]
+    signature         = auth_header[1]
     public_key_server = File.read('config/.keys/key.pub').split(' ')[1]
     halt 403 unless public_key_client == public_key_server
     uri = request.path

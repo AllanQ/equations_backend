@@ -3,7 +3,7 @@ GEM
   specs:
     diff-lcs (1.2.5)
     json (2.0.2)
-    rack (1.5.5)
+    rack (1.6.4)
     rack-protection (1.5.3)
       rack
     rspec (3.5.0)
