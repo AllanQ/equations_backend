@@ -1,7 +1,7 @@
 require_relative '../../lib/quadratic_equation'
 
 describe QuadraticEquation do
-  describe '#discriminant', :private do
+  describe '#discriminant' do
     it 'compute discriminant' do
       equation_params = {"a"=>"5", "b"=>"6", "c"=>"7"}
 

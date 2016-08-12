@@ -1,7 +1,7 @@
 require_relative '../../lib/equation'
 
 describe String do
-  describe '#to_f_if_numeric', :private do
+  describe '#to_f_if_numeric' do
     let(:equation) { Equation.new({"a"=>"1", "b"=>"5", "c"=>"4"}) }
     it 'number' do
       expect(equation.to_f_if_numeric('7')).to eq(7.0)
